@@ -1,0 +1,245 @@
+/* Estilos generales */
+*{
+  margin: 0px;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html{
+  margin: 50px;
+}
+<!---->
+  /* Franja azul con botones */
+  .navbar2 {
+    display: flex;
+    background-color: rgb(243, 243, 217, 1); /* /* establece el color de fondo de la franja azul*/ 
+    padding: 1px; /*agrega un espacio de 10 píxeles entre el borde y el contenido de la franja azul.*/
+  }
+ /* Banner */
+  .banner {
+    background-color: lightgray;
+    text-align: center;
+  }
+  
+  .banner-img {
+    max-width: 100%;
+  }
+  
+  /* Contenido de la página */
+  .container {
+    margin: 50px;
+    text-align: center;
+  }
+
+.Mesapartes{
+  display: flex; 
+  justify-content: 
+  center; width: 100%;
+}
+.imagen{
+    width: 20px;
+    margin-right: 10px;
+}
+.texto{
+    align-items: end;
+}
+.LogoDerecha{
+  display: flex; 
+  justify-content: 
+  center; width: 100%;
+}
+.imagenes{
+    width: 23px;
+    margin-right: 10px;
+}
+.imagene{
+    width: 48px;
+    margin-right: 10px;
+}
+.imagenlogo{
+    width: 250px;
+    margin-right: 1000px;
+}
+.imegenSecu{
+    width: 40px;
+    margin-right: 10px;
+}
+.secundarios{
+    display: flex;
+    justify-content: right;
+}
+
+.navegacion{
+  width: 800px;
+  margin: 30px auto;
+  background: #fff;
+}
+.navegacion ul{
+  list-style: none;
+}
+.menu > li{
+  float:left;
+}
+.menu li a{
+  color: #353535;
+  text-decoration:none;
+  padding: 15px 20px;
+  display:block;
+}
+.menu li a:hover{
+  color: #ce7d35;
+  transition: all .3s;
+}
+.menu li ul {
+  display:none;
+  position:absolute;
+  min-width:140px;
+}
+
+.menu li:hover > ul {
+  display:block;
+}
+
+.menu li ul li {
+  position:relative;
+  margin: 0px auto;
+  background: lightgray;
+}
+.submenu{
+  position: absolute;
+  background: #333333;
+  width: 130%;
+  visibility: visible;
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+.submenu li a{
+  display: block;
+  padding: 15px;
+  color: #fff;
+  font-family: 'Open sans';
+  text-decoration: none;
+}
+.menu li a:hover.submenu{
+  visibility: visible;
+  opacity: 8;
+}
+
+/*prueba del carrusel*/
+
+
+.slide-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: calc( 450px + 3em);
+}
+
+.slide-open:checked + .slide-item {
+  position: static;
+  opacity: 100;
+}
+
+.slide-item {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+}
+
+.slide-item img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.slide-control {
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 40px;
+  height: 40px;
+  line-height: 35px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  cursor: pointer;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-align: center;
+  width: 40px;
+  z-index: 10;
+}
+
+.slide-control.prev {
+  left: 4%;
+}
+
+.slide-control.next {
+  right: 4%;
+}
+
+.slide-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #aaaaaa;
+}
+
+#slide-1:checked ~ .control-1,
+#slide-2:checked ~ .control-2,
+#slide-3:checked ~ .control-3 {
+  display: block;
+}
+
+.slide-indicador {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+.slide-indicador li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.slide-circulo {
+  color: #828282;
+  cursor: pointer;
+  display: block;
+  font-size: 35px;
+}
+
+.slide-circulo:hover {
+  color: #aaaaaa;
+}
+
+#slide-1:checked ~ .control-1 ~ .slide-indicador 
+   li:nth-child(1) .slide-circulo,
+#slide-2:checked ~ .control-2 ~ .slide-indicador 
+    li:nth-child(2) .slide-circulo,
+#slide-3:checked ~ .control-3 ~ .slide-indicador 
+    li:nth-child(3) .slide-circulo {
+  color: #428bca;
+}
+
+#titulo {
+  width: 100%;
+  position: absolute;
+  padding: 0px;
+  margin: 0px auto;
+  text-align: center;
+  font-size: 27px;
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Open Sans', sans-serif;
+  z-index: 9999;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
+       -1px 0px 2px rgba(255, 255, 255, 0);
+}
