@@ -37,6 +37,11 @@ html{
   justify-content: 
   center; width: 100%;
 }
+
+.imagen{
+    width: 20px;
+    margin-right: 10px;
+}
 .texto{
     align-items: end;
 }
@@ -49,9 +54,21 @@ html{
     width: 23px;
     margin-right: 10px;
 }
+.imagene{
+    width: 48px;
+    margin-right: 10px;
+}
 .imagenlogo{
-    width: 250px;
+    width: 150px;
     margin-right: 1000px;
+}
+.imegenSecu{
+    width: 40px;
+    margin-right: 10px;
+}
+.secundarios{
+    display: flex;
+    justify-content: right;
 }
 
 .navegacion{
