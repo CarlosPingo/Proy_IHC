@@ -37,25 +37,26 @@
       if (visitasDiarias) {
         document.getElementById("total-visitas").textContent = visitasDiarias;
 
-        // Obtener el historial de visitas
-        let historialVisitas = localStorage.getItem('historialVisitas');
-        historialVisitas = historialVisitas ? JSON.parse(historialVisitas) : [];
-
         // Obtener la fecha actual
         var fechaActual = new Date().toLocaleDateString();
 
-        // Obtener la fecha del último registro en el historial
-        var ultimoRegistro = historialVisitas[historialVisitas.length - 1];
-        var fechaUltimoRegistro = new Date(ultimoRegistro).toLocaleDateString();
+        // Obtener la fecha del último registro en el almacenamiento local
+        var fechaUltimoRegistro = localStorage.getItem('fechaUltimoRegistro');
 
         // Verificar si es un nuevo día
         if (fechaActual !== fechaUltimoRegistro) {
+          // Agregar la visita diaria al historial de visitas
+          let historialVisitas = localStorage.getItem('historialVisitas');
+          historialVisitas = historialVisitas ? JSON.parse(historialVisitas) : [];
           historialVisitas.push(visitasDiarias);
+          localStorage.setItem('historialVisitas', JSON.stringify(historialVisitas));
+
+          // Actualizar la fecha del último registro en el almacenamiento local
+          localStorage.setItem('fechaUltimoRegistro', fechaActual);
         }
 
         // Actualizar el gráfico de visitas
         actualizarGraficoVisitas(historialVisitas);
-        localStorage.setItem('historialVisitas', JSON.stringify(historialVisitas));
       }
     }
 
@@ -85,15 +86,11 @@
       });
     }
 
-    // Obtener el número total de visitas diarias al cargar el dashboard222222
+    // Obtener el número total de visitas diarias al cargar el dashboard22221
     obtenerTotalVisitasDiarias();
   </script>
 </body>
 </html>
-
-
-
-
 
 
 
