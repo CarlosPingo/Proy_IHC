@@ -25,24 +25,24 @@
     <p>© 2023 Dashboard de Noticias - Ciudad de Huari</p>
   </footer>
 
-  <script>
-    // Función para obtener el número total de visitas
-    function obtenerTotalVisitas() {
-      let totalVisitas = localStorage.getItem('totalVisitas');
-      if (totalVisitas) {
-        document.getElementById("total-visitas").textContent = totalVisitas;
-      } else {
-        totalVisitas = 0;
-      }
+  <div class="metric">
+  <h2>Visitas Diarias</h2>
+  <p id="total-visitas"></p>
+</div>
 
-      // Incrementar el número de visitas
-      totalVisitas++;
-      localStorage.setItem('totalVisitas', totalVisitas);
+<script>
+  // Función para obtener el número total de visitas diarias
+  function obtenerTotalVisitasDiarias() {
+    let visitasDiarias = localStorage.getItem('visitasDiarias');
+    if (visitasDiarias) {
+      document.getElementById("total-visitas").textContent = visitasDiarias;
     }
+  }
 
-    // Obtener el número total de visitas al cargar la página1111
-    obtenerTotalVisitas();
-  </script>
+  // Obtener el número total de visitas diarias al cargar el dashboard
+  obtenerTotalVisitasDiarias();
+</script>
+
 </body>
 </html>
 
