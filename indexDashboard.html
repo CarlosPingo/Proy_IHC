@@ -1,0 +1,55 @@
+<html>
+<head>
+  <title>Dashboard de Noticias - Ciudad de Huari</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Dashboard de Noticias</h1>
+  </header>
+
+  <section id="metrics">
+    <div class="metric">
+      <h2>Total de Noticias</h2>
+      <p>25</p>
+    </div>
+    <div class="metric">
+      <h2>Visitas Diarias</h2>
+      <p id="total-visitas"></p>
+    </div>
+    <!-- Agrega más elementos de métricas aquí -->
+  </section>
+
+  <footer>
+    <p>© 2023 Dashboard de Noticias - Ciudad de Huari</p>
+  </footer>
+
+  <script>
+    // Función para obtener el número total de visitas
+    function obtenerTotalVisitas() {
+      fetch('https://carlospingo.github.io/Proy_IHC/')
+        .then(response => response.text())
+        .then(data => {
+          const visitas = data.match(/<p id="total-visitas">(\d+)<\/p>/);
+          if (visitas && visitas[1]) {
+            document.getElementById("total-visitas").textContent = visitas[1];
+          }
+        })
+        .catch(error => {
+          console.log('Error al obtener el número total de visitas:', error);
+        });
+    }
+
+    // Obtener el número total de visitas al cargar la página
+    obtenerTotalVisitas();
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
