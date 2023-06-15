@@ -1,121 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TRABAJOGRUPAL</title>
-  <link rel="stylesheet" href="estilos/estilos.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Dashboard</title>
+    <!-- BOX ICONS -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="./css/estilos.css">
+    <!-- CUSTOM JS -->
+    <script src="./js/app.js" defer></script>
 </head>
-<body bgcolor="#FAFAD2">
-  <!-- Contenido de la página principal -->
-  <a href="./indexDashboard.html" target="_blank" class="Dashboard" Dashboard>
-  <div class="navbar2">
-    <div class="Mesapartes">
-      <img class="imagen" src="images/gmail.png">
+<body>
+
+    <div class="menu-dashboard">
+        <!-- TOP MENU -->
+        <div class="top-menu">
+            <div class="logo">
+                <img src="./img/logo.svg" alt="">
+                <span>EducaHuari</span>
+            </div>
+            <div class="toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </div>
+        <!-- INPUT SEARCH -->
+        <div class="input-search">
+            <i class='bx bx-search'></i>
+            <input type="text" class="input" placeholder="Buscar">
+        </div>
+        <!-- MENU -->
+        <div class="menu">
+            <div class="enlace">
+                <i class="bx bx-grid-alt"></i>
+                <span>Inicio</span>
+            </div>
+
+            <div class="enlace">
+                <i class="bx bx-user"></i>
+                <span>Usuarios</span>
+            </div>
+
+            <div class="enlace">
+                <i class="bx bx-grid-alt"></i>
+                <a href="./Analíticas/Analíticas.html"><span>Analíticas</span></a>
+            </div>
+            <div class="enlace">
+                <i class="bx bx-cog"></i>
+                <span>Configuración</span>
+            </div>
+        </div>
     </div>
-
-    <div class="LogoDerecha">
-      <a href="https://www.facebook.com/profile.php?id=100012454003090" target="_blank">
-        <img class="imagenes" src="images/facebook.png">
-      </a>
-      <a href="https://www.sacooliveros.edu.pe/index.php/colegios/servicios/intranet" target="_blank">
-        <img class="imagenes" src="images/intranet.png">
-      </a>
-    </div>
-  </div>
-
-  <div class="Mesapartes">
-    <img class="imagenlogo" src="images/logo.png">
-  </div>  
-
-  <!-- Franja azul con botones etiqueta "a" href  -->
-  <header>
-    <nav class="navegacion">
-      <ul class="menu">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Nosotros</a>
-          <ul><!--class="submenu"-->
-            <li><a href="#">Visión &amp; Misión</a></li>
-            <li><a href="#">Autoridades</a></li>
-            <li><a href="#">Docentes</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Niveles</a>
-          <ul><!--class="submenu"-->
-            <li><a href="#">Inicial</a></li>
-            <li><a href="#">Primaria</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Experiencia</a></li>
-        <li><a href="#">Noticias</a></li>
-        <li><a href="#">Comunicados</a></li>
-        <li><a href="#">Contáctenos</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!--PRUEBA DE CARRUSEL-->
-  <div class="slide">
-    <div class="slide-inner">
-      <input class="slide-open" type="radio" id="slide-1" name="slide" aria-hidden="true" hidden="" checked="checked">
-      <div class="slide-item">
-        <img src="images/fondo1.jpg">
-      </div>
-      <input class="slide-open" type="radio" id="slide-2" name="slide" aria-hidden="true" hidden="">
-      <div class="slide-item">
-        <img src="images/fondo2.jpg">
-      </div>
-      <input class="slide-open" type="radio" id="slide-3" name="slide" aria-hidden="true" hidden="">
-      <div class="slide-item">
-        <img src="images/fondo3.jpg">
-      </div>
-      <label for="slide-3" class="slide-control prev control-1">‹</label>
-      <label for="slide-2" class="slide-control next control-1">›</label>
-      <label for="slide-1" class="slide-control prev control-2">‹</label>
-      <label for="slide-3" class="slide-control next control-2">›</label>
-      <label for="slide-2" class="slide-control prev control-3">‹</label>
-      <label for="slide-1" class="slide-control next control-3">›</label>
-      <ol class="slide-indicador">
-        <li>
-          <label for="slide-1" class="slide-circulo">•</label>
-        </li>
-        <li>
-          <label for="slide-2" class="slide-circulo">•</label>
-        </li>
-        <li>
-          <label for="slide-3" class="slide-circulo">•</label>
-        </li>
-      </ol>
-    </div>
-  </div>
-  <!---FINALIZA PRUEBA-->
-
-  <!-- Contenido de la página -->
-  <div class="container">
-    <!-- Asegurarse de que se muestre correctamente en diferentes dispositivos -->
-    <h1>Mi página web</h1>
-    <p>Visitas diarias: <span id="visitas-diarias">0</span></p>
-  </div>
-
-  <script>
-    // Función para incrementar las visitas diarias
-function incrementarVisitasDiarias() {
-  let visitasDiarias = localStorage.getItem('visitasDiarias');
-  if (!visitasDiarias) {
-    visitasDiarias = 0;
-  }
-  visitasDiarias++;
-  localStorage.setItem('visitasDiarias', visitasDiarias);
-}
-
-// Incrementar las visitas diarias al cargar la página principal1111111
-incrementarVisitasDiarias();
-
-  </script>
+    
 </body>
 </html>
-
-
-
-
