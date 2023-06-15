@@ -40,14 +40,26 @@
         // Obtener la fecha actual
         let fechaActual = new Date().toLocaleDateString();
 
-        // Agregar la visita diaria al historial de visitas con la fecha actual
+        // Obtener el último registro del historial de visitas
         let historialVisitas = localStorage.getItem('historialVisitas');
         historialVisitas = historialVisitas ? JSON.parse(historialVisitas) : [];
-        historialVisitas.push({ fecha: fechaActual, visitas: visitasDiarias });
+
+        // Verificar si el último registro tiene la misma fecha actual
+        if (historialVisitas.length > 0 && historialVisitas[historialVisitas.length - 1].fecha === fechaActual) {
+          // Si la fecha es la misma, actualizar solo el último registro de visitas
+          historialVisitas[historialVisitas.length - 1].visitas = visitasDiarias;
+        } else {
+          // Si la fecha es diferente, agregar un nuevo registro al historial
+          historialVisitas.push({ fecha: fechaActual, visitas: visitasDiarias });
+        }
+
+        // Almacenar el historial actualizado
         localStorage.setItem('historialVisitas', JSON.stringify(historialVisitas));
 
-        // Actualizar el gráfico de visitas
-        actualizarGraficoVisitas(historialVisitas);
+        // Actualizar el gráfico de visitas si ha cambiado el día
+        if (historialVisitas.length > 1 && historialVisitas[historialVisitas.length - 1].fecha !== historialVisitas[historialVisitas.length - 2].fecha) {
+          actualizarGraficoVisitas(historialVisitas);
+        }
       }
     }
 
@@ -88,6 +100,7 @@
 
 </body>
 </html>
+
 
 
 
