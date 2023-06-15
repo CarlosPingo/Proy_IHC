@@ -37,10 +37,13 @@
       if (visitasDiarias) {
         document.getElementById("total-visitas").textContent = visitasDiarias;
 
-        // Agregar la visita diaria al historial de visitas
+        // Obtener la fecha actual
+        let fechaActual = new Date().toLocaleDateString();
+
+        // Agregar la visita diaria al historial de visitas con la fecha actual
         let historialVisitas = localStorage.getItem('historialVisitas');
         historialVisitas = historialVisitas ? JSON.parse(historialVisitas) : [];
-        historialVisitas.push(visitasDiarias);
+        historialVisitas.push({ fecha: fechaActual, visitas: visitasDiarias });
         localStorage.setItem('historialVisitas', JSON.stringify(historialVisitas));
 
         // Actualizar el gráfico de visitas
@@ -51,13 +54,18 @@
     // Función para actualizar el gráfico de visitas diarias
     function actualizarGraficoVisitas(historialVisitas) {
       var ctx = document.getElementById('visitas-chart').getContext('2d');
+
+      // Extraer las fechas y visitas del historial en arreglos separados
+      var fechas = historialVisitas.map(visita => visita.fecha);
+      var visitas = historialVisitas.map(visita => visita.visitas);
+
       var chart = new Chart(ctx, {
         type: 'line',
         data: {
-          labels: historialVisitas.map((_, index) => 'Día ' + (index + 1)),
+          labels: fechas,
           datasets: [{
             label: 'Visitas Diarias',
-            data: historialVisitas,
+            data: visitas,
             backgroundColor: 'rgba(75, 192, 192, 0.2)',
             borderColor: 'rgba(75, 192, 192, 1)',
             borderWidth: 1
@@ -80,6 +88,7 @@
 
 </body>
 </html>
+
 
 
 
