@@ -26,6 +26,8 @@
     </div>
   </section>
 
+  <button onclick="borrarDatos()">Borrar Datos</button> <!-- Botón para borrar los datos -->
+  
   <footer>
     <p>© 2023 Dashboard de Noticias - Ciudad de Huari</p>
   </footer>
@@ -80,12 +82,23 @@
     localStorage.setItem('datos', JSON.stringify(datos));
   }
 
+  // Función para borrar los datos almacenados en el almacenamiento local
+  function borrarDatos() {
+    localStorage.removeItem('visitasDiarias');
+    localStorage.removeItem('etiquetas');
+    localStorage.removeItem('datos');
+    document.getElementById("total-visitas").textContent = "";
+    const ctx = document.getElementById('visitas-chart').getContext('2d');
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+  }
+
   // Obtener el número total de visitas diarias al cargar el dashboard
   obtenerTotalVisitasDiarias();
 </script>
 
 </body>
 </html>
+
 
 
 
