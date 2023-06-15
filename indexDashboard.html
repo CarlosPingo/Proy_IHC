@@ -18,69 +18,27 @@
       <h2>Visitas Diarias</h2>
       <p id="total-visitas"></p>
     </div>
-    <canvas id="visitas-chart"></canvas>
     <!-- Agrega más elementos de métricas aquí -->
   </section>
 
   <footer>
     <p>© 2023 Dashboard de Noticias - Ciudad de Huari</p>
   </footer>
-  
 
 
 
 <script>
-function obtenerTotalVisitasDiarias() {
-  let visitasDiarias = localStorage.getItem('visitasDiarias');
-  if (visitasDiarias) {
-    document.getElementById("total-visitas").textContent = visitasDiarias;
-    
-    let historialVisitas = JSON.parse(localStorage.getItem('historialVisitas'));
-    if (!historialVisitas) {
-      historialVisitas = [];
+  // Función para obtener el número total de visitas diarias
+  function obtenerTotalVisitasDiarias() {
+    let visitasDiarias = localStorage.getItem('visitasDiarias');
+    if (visitasDiarias) {
+      document.getElementById("total-visitas").textContent = visitasDiarias;
     }
-    
-    historialVisitas.push(parseInt(visitasDiarias));
-    localStorage.setItem('historialVisitas', JSON.stringify(historialVisitas));
-    
-    mostrarGrafico(historialVisitas);
   }
-}
 
-function mostrarGrafico(historialVisitas) {
-  // Obtén el contexto del canvas
-  let ctx = document.getElementById('visitas-chart').getContext('2d');
-
-  // Define los datos del gráfico
-  let data = {
-    labels: historialVisitas.map((_, index) => `Día ${index + 1}`),
-    datasets: [{
-      label: 'Visitas Diarias',
-      data: historialVisitas,
-      backgroundColor: 'rgba(0, 123, 255, 0.3)',
-      borderColor: 'rgba(0, 123, 255, 1)',
-      borderWidth: 1
-    }]
-  };
-
-  // Configura las opciones del gráfico
-  let options = {
-    responsive: true,
-    maintainAspectRatio: false
-  };
-
-  // Crea el gráfico usando Chart.js
-  new Chart(ctx, {
-    type: 'line',
-    data: data,
-    options: options
-  });
-}
-
-
-  
+  // Obtener el número total de visitas diarias al cargar el dashboard2222222
+  obtenerTotalVisitasDiarias();
 </script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </body>
 </html>
