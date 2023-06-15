@@ -94,29 +94,29 @@
   <div class="container">
     <!-- Asegurarse de que se muestre correctamente en diferentes dispositivos -->
     <h1>Mi página web</h1>
+    <p>Visitas diarias: <span id="visitas-diarias">0</span></p>
   </div>
 
-  <!-- Script para incrementar el contador de visitas -->
   <script>
-    // Obtener el contador de visitas actual
-    let contadorVisitas = localStorage.getItem("contadorVisitas");
+    // Obtener el contador de visitas almacenado en LocalStorage
+    let visitas = localStorage.getItem('visitas');
 
-    // Verificar si el contador existe y es un número válido
-    if (!contadorVisitas || isNaN(contadorVisitas)) {
-      contadorVisitas = 0;
+    // Verificar si el contador existe en LocalStorage
+    if (visitas) {
+      visitas = parseInt(visitas) + 1; // Incrementar el contador
+    } else {
+      visitas = 1; // Establecer el contador en 1 si no existe
     }
 
-    // Incrementar el contador de visitas
-    contadorVisitas++;
-    
-    // Guardar el contador de visitas en el almacenamiento local
-    localStorage.setItem("contadorVisitas", contadorVisitas);
+    // Almacenar el nuevo contador en LocalStorage
+    localStorage.setItem('visitas', visitas);
 
-    // Mostrar el contador de visitas en la consola
-    console.log("Contador de visitas:", contadorVisitas);
+    // Actualizar el elemento HTML con el contador de visitas
+    document.getElementById('visitas-diarias').textContent = visitas;
   </script>
 </body>
 </html>
+
 
 
 
