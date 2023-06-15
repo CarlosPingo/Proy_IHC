@@ -3,6 +3,7 @@
 <head>
   <title>Dashboard de Noticias - Ciudad de Huari</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <header>
@@ -18,30 +19,68 @@
       <h2>Visitas Diarias</h2>
       <p id="total-visitas"></p>
     </div>
-    <!-- Agrega más elementos de métricas aquí -->
+
+    <div class="metric">
+      <h2>Gráfico de Visitas Diarias</h2>
+      <canvas id="visitas-chart"></canvas>
+    </div>
   </section>
 
   <footer>
     <p>© 2023 Dashboard de Noticias - Ciudad de Huari</p>
   </footer>
 
+  <script>
+    // Función para obtener el número total de visitas diarias
+    function obtenerTotalVisitasDiarias() {
+      let visitasDiarias = localStorage.getItem('visitasDiarias');
+      if (visitasDiarias) {
+        document.getElementById("total-visitas").textContent = visitasDiarias;
 
+        // Agregar la visita diaria al historial de visitas
+        let historialVisitas = localStorage.getItem('historialVisitas');
+        historialVisitas = historialVisitas ? JSON.parse(historialVisitas) : [];
+        historialVisitas.push(visitasDiarias);
+        localStorage.setItem('historialVisitas', JSON.stringify(historialVisitas));
 
-<script>
-  // Función para obtener el número total de visitas diarias
-  function obtenerTotalVisitasDiarias() {
-    let visitasDiarias = localStorage.getItem('visitasDiarias');
-    if (visitasDiarias) {
-      document.getElementById("total-visitas").textContent = visitasDiarias;
+        // Actualizar el gráfico de visitas
+        actualizarGraficoVisitas(historialVisitas);
+      }
     }
-  }
 
-  // Obtener el número total de visitas diarias al cargar el dashboard2222222
-  obtenerTotalVisitasDiarias();
-</script>
+    // Función para actualizar el gráfico de visitas diarias
+    function actualizarGraficoVisitas(historialVisitas) {
+      var ctx = document.getElementById('visitas-chart').getContext('2d');
+      var chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: historialVisitas.map((_, index) => 'Día ' + (index + 1)),
+          datasets: [{
+            label: 'Visitas Diarias',
+            data: historialVisitas,
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    }
+
+    // Obtener el número total de visitas diarias al cargar el dashboard
+    obtenerTotalVisitasDiarias();
+  </script>
 
 </body>
 </html>
+
 
 
 
