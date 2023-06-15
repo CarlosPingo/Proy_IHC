@@ -18,16 +18,11 @@
     <div class="metric">
       <h2>Visitas Diarias</h2>
       <p id="total-visitas"></p>
-    </div>
-    <!-- Agrega más elementos de métricas aquí -->
-    <div class="metric">
-      <h2>Gráfico de Visitas Diarias</h2>
       <canvas id="visitas-chart"></canvas>
     </div>
+    <!-- Agrega más elementos de métricas aquí -->
   </section>
 
-  <button onclick="borrarDatos()">Borrar Datos</button> <!-- Botón para borrar los datos -->
-  
   <footer>
     <p>© 2023 Dashboard de Noticias - Ciudad de Huari</p>
   </footer>
@@ -44,7 +39,7 @@
 
   // Función para actualizar la gráfica de visitas diarias
   function actualizarGrafica(visitasDiarias) {
-    const fechaActual = new Date().toLocaleDateString('es-PE');
+    const fechaActual = new Date().toLocaleDateString('en-US');
     const etiquetas = JSON.parse(localStorage.getItem('etiquetas')) || [];
     const datos = JSON.parse(localStorage.getItem('datos')) || [];
 
@@ -82,22 +77,13 @@
     localStorage.setItem('datos', JSON.stringify(datos));
   }
 
-  // Función para borrar los datos almacenados en el almacenamiento local
-  function borrarDatos() {
-    localStorage.removeItem('visitasDiarias');
-    localStorage.removeItem('etiquetas');
-    localStorage.removeItem('datos');
-    document.getElementById("total-visitas").textContent = "";
-    const ctx = document.getElementById('visitas-chart').getContext('2d');
-    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-  }
-
   // Obtener el número total de visitas diarias al cargar el dashboard
   obtenerTotalVisitasDiarias();
 </script>
 
 </body>
 </html>
+
 
 
 
