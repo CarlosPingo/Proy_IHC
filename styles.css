@@ -30,12 +30,10 @@ body {
     padding: 10px;
     text-align: center;
   }
-
-#visitas-chart {
-  width: 100%;
-  height: 300px;
-  margin-top: 20px;
-}
+  #visitas-chart {
+    width: 400px;
+    height: 300px;
+  }
 
 
 
