@@ -3,6 +3,7 @@
 <head>
   <title>Dashboard de Noticias - Ciudad de Huari</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <header>
@@ -19,13 +20,15 @@
       <p id="total-visitas"></p>
     </div>
     <!-- Agrega más elementos de métricas aquí -->
+    <div class="metric">
+      <h2>Gráfico de Visitas Diarias</h2>
+      <canvas id="visitas-chart"></canvas>
+    </div>
   </section>
 
   <footer>
     <p>© 2023 Dashboard de Noticias - Ciudad de Huari</p>
   </footer>
-
-
 
 <script>
   // Función para obtener el número total de visitas diarias
@@ -33,15 +36,57 @@
     let visitasDiarias = localStorage.getItem('visitasDiarias');
     if (visitasDiarias) {
       document.getElementById("total-visitas").textContent = visitasDiarias;
+      actualizarGrafica(visitasDiarias);
     }
   }
 
-  // Obtener el número total de visitas diarias al cargar el dashboard2222222
+  // Función para actualizar la gráfica de visitas diarias
+  function actualizarGrafica(visitasDiarias) {
+    const fechaActual = new Date().toLocaleDateString('en-US');
+    const etiquetas = JSON.parse(localStorage.getItem('etiquetas')) || [];
+    const datos = JSON.parse(localStorage.getItem('datos')) || [];
+
+    if (etiquetas.includes(fechaActual)) {
+      const indice = etiquetas.indexOf(fechaActual);
+      datos[indice] = visitasDiarias;
+    } else {
+      etiquetas.push(fechaActual);
+      datos.push(visitasDiarias);
+    }
+
+    const ctx = document.getElementById('visitas-chart').getContext('2d');
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: etiquetas,
+        datasets: [{
+          label: 'Visitas Diarias',
+          data: datos,
+          backgroundColor: 'rgba(0, 123, 255, 0.2)',
+          borderColor: 'rgba(0, 123, 255, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    localStorage.setItem('etiquetas', JSON.stringify(etiquetas));
+    localStorage.setItem('datos', JSON.stringify(datos));
+  }
+
+  // Obtener el número total de visitas diarias al cargar el dashboard
   obtenerTotalVisitasDiarias();
 </script>
 
 </body>
 </html>
+
 
 
 
