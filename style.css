@@ -283,9 +283,9 @@ div #menu-b  {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 300px; /* Espacio entre elementos */
+    margin-right: 250px; /* Espacio entre elementos */
     position: relative;
-    left: 200px;
+    left: 150px;
     top: 100px;
   }
   .NColegio{
@@ -296,7 +296,9 @@ div #menu-b  {
   }
   .Descripcion{
     color: rgb(67, 28, 28);
-    text-align: center;
+    text-align:center;
+    border: 1px solid black; /* Establece un borde de 1 píxel de ancho y sólido de color negro */
+    padding: 10px; /* Añade 10 píxeles de espacio dentro del borde */
   }
   .Final img {
     width: 100px; /* Tamaño de la imagen */
