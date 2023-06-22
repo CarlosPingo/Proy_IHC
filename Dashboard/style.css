@@ -1,0 +1,47 @@
+html{
+  background-color: rgb(160, 160, 160);
+}
+#ContadorT{
+    display: inline-block;
+    position: relative;
+    left: 100px;
+    top: 20px;
+    width: 300px;   /* Ancho del cuadrado */
+    height: 110px;  /* Alto del cuadrado */
+    border: 2px solid black;  /* Borde del cuadrado */
+    padding: 20px;  /* Espacio interno dentro del cuadrado */
+    background-color: white;
+    text-align: center;
+  }
+  #ContadorH{
+    display: inline-block;
+    position: relative;
+    left: 100px;
+    top: 20px;
+    width: 300px;   /* Ancho del cuadrado */
+    height: 110px;  /* Alto del cuadrado */
+    border: 2px solid black;  /* Borde del cuadrado */
+    padding: 20px;  /* Espacio interno dentro del cuadrado */
+    background-color: white;
+    text-align: center;
+  }
+  #GraficoBarras{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 100px;
+    top: 25px;
+    width: 667px; /* Ajusta el ancho del contenedor según tus necesidades */
+    height: 300px; /* Ajusta la altura del contenedor según tus necesidades */
+    border: 2px solid black; /* Agrega un borde al contenedor si deseas */
+    padding: 10px; /* Ajusta el relleno interno del contenedor según tus necesidades */
+    background-color: white;
+  }
+  .Dv{
+    text-align: center;
+    font-size: 40px;
+    background-color: rgb(44, 44, 44);
+    color: white;
+    position: relative;
+    top: 0%;
+  }

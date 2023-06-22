@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./contador.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h2 class="Dv">DASHBOARD - VISITAS</h1>
+    <div id="ContadorT">
+        <h2>Contador de Visitas - Total</h2>
+        <div id="total-visitas">Cargando total de visitas...</div>
+    </div>
+    <div id="ContadorH">
+        <h2>Contador de Visitas - Hoy </h2>
+        <p>Total de visitas del día: <span id="total-visitas-dia"></span></p>
+    </div>
+    <div id="GraficoBarras">
+        <canvas id="grafico-barras"></canvas> <!-- Elemento donde se mostrará el gráfico de barras -->
+    </div>
+</body>
+</html>
