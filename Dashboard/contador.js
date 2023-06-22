@@ -112,7 +112,7 @@ if (document.title === "Dashboard") {
         document.getElementById("total-visitas").innerText = "Total de visitas: " + obtenerTotalVisitas();
         generarGraficoBarrasYTotalVisitasDia();
     };
-} else if (document.title === "Pagina Principal") {
+} else if (document.title === "Huari_Educa") {
     incrementarContador();
     incrementarContadorDiario();
     generarGraficoBarrasYTotalVisitasDia();
