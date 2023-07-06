@@ -1,4 +1,4 @@
-var apiKey = 'AIzaSyCWruG4grXV4D65KxVIY_j5h29miCvdG7Y';
+var apiKey = 'AIzaSyAVCmSYd_3l33HiIUh2-KreLfRZlgiR-ww';
 var channels = [
   { id: 'UCUhq99pWPJVRUzlKIGQCKlw', containerId: 'channel1' },
   { id: 'UCBKWTG-WMTDP-GhWMvkYMMQ ', containerId: 'channel2' },
