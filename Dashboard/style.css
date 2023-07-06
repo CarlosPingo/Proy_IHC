@@ -1,41 +1,48 @@
 html{
-  background-color: rgb(160, 160, 160);
+  background-color: rgb(255, 255, 255);
 }
 #ContadorT{
-    display: inline-block;
+    display: block;
     position: relative;
-    left: 100px;
+    left: 50px;
     top: 20px;
-    width: 300px;   /* Ancho del cuadrado */
-    height: 110px;  /* Alto del cuadrado */
-    border: 2px solid black;  /* Borde del cuadrado */
+    width: 600px;   /* Ancho del cuadrado */
+    height: 200px;  /* Alto del cuadrado */
+    border: 5px solid black;  /* Borde del cuadrado */
     padding: 20px;  /* Espacio interno dentro del cuadrado */
     background-color: white;
     text-align: center;
   }
   #ContadorH{
-    display: inline-block;
+    display: block;
     position: relative;
-    left: 100px;
-    top: 20px;
-    width: 300px;   /* Ancho del cuadrado */
-    height: 110px;  /* Alto del cuadrado */
-    border: 2px solid black;  /* Borde del cuadrado */
+    left: 50px;
+    top: 50px;
+    width: 600px;   /* Ancho del cuadrado */
+    height: 200px;  /* Alto del cuadrado */
+    border: 5px solid black;  /* Borde del cuadrado */
     padding: 20px;  /* Espacio interno dentro del cuadrado */
     background-color: white;
     text-align: center;
+  }
+  .subT{
+    font-size: 40px;
+  }
+  .ssT{
+    font-size: 30px;
   }
   #GraficoBarras{
     display: flex;
     flex-direction: column;
     position: relative;
-    left: 100px;
-    top: 25px;
-    width: 667px; /* Ajusta el ancho del contenedor según tus necesidades */
-    height: 300px; /* Ajusta la altura del contenedor según tus necesidades */
+    left: 730px;
+    top: -400px;
+    width: 740px; /* Ajusta el ancho del contenedor según tus necesidades */
+    height: 400px; /* Ajusta la altura del contenedor según tus necesidades */
     border: 2px solid black; /* Agrega un borde al contenedor si deseas */
     padding: 10px; /* Ajusta el relleno interno del contenedor según tus necesidades */
     background-color: white;
+    border: 5px solid black;  /* Borde del cuadrado */
   }
   .Dv{
     text-align: center;
