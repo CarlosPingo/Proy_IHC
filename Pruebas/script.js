@@ -5,6 +5,7 @@ var channels = [
   { id: 'UCoC0VwiI5wzLjjXe_gqLBpQ', containerId: 'channel3' },
   { id: 'UCwvYvIjhvpkFwIrSbwIxt_g', containerId: 'channel4' }
 ];
+
 var videos = {};
 
 function getLatestVideo(channelId, containerId) {
