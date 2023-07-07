@@ -1,0 +1,26 @@
+.Insignias {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  align-items: center;
+  display: flex;
+  position: relative;
+  top: 200px;
+  
+}
+
+.imagen-con-nombre {
+  text-align: center;
+  
+}
+
+.imagen-con-nombre img {
+  display: block;
+  margin: 0 auto;
+  width: 150px; /* Ajusta el ancho del contenedor según tus necesidades */
+  height: 150px; /* Ajusta la altura del contenedor según tus necesidades */
+}
+
+.nombre-colegio {
+  margin-top: 50px;
+}
