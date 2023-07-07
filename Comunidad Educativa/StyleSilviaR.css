@@ -1,5 +1,10 @@
 .portada img {
-  width: 80%; /* Ajusta el tamaño de la imagen según tus necesidades */
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+.NOTICIAS img {
+  width: 80%;
   display: block;
   margin: 0 auto;
 }
