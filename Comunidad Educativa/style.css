@@ -24,3 +24,9 @@
 .nombre-colegio {
   margin-top: 50px;
 }
+a {
+  font-size: 30px;
+  font-family: "inter";
+  text-decoration: none;
+  color: inherit;
+}
