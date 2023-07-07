@@ -1,0 +1,5 @@
+.portada img {
+  width: 80%; /* Ajusta el tamaño de la imagen según tus necesidades */
+  display: block;
+  margin: 0 auto;
+}
