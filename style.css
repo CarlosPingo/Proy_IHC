@@ -140,7 +140,7 @@ div #menu-b  {
   
 #menu-b ul li a {
   background: url(https://s3-eu-west-1.amazonaws.com/img-lawebera/anfergon/boton1.jpg) no-repeat left;
-  font: normal 15px arial;
+  font-family: normal 15px inter;
   color: black;
   text-decoration: none;
   padding: 5px 5px 5px 15px;
