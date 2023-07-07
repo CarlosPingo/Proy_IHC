@@ -7,29 +7,6 @@
   position: relative;
   top: 200px;
   
-}
-
-.ManuelG {
-  text-align: center; 
-}
-.VirgenF {
-  text-align: center; 
-}
-.SilviaR {
-  text-align: center; 
-}
-
-.ManuelG img {
-  display: block;
-  margin: 0 auto;
-  width: 150px; /* Ajusta el ancho del contenedor según tus necesidades */
-  height: 150px; /* Ajusta la altura del contenedor según tus necesidades */
-}
-
-.MG {
-  margin-top: 50px;
-  text-decoration: none;
-}
 a {
   font-size: 30px;
   font-family: "inter";
