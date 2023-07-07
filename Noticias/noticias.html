@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!--  Metadatos -->
+  <meta charset="utf-8"><!-- caracteres correctos -->
+  <meta name="author" content=" Ronaldo Elias">
+  <meta nname="description" content="Municipalidad">
+  <meta nname="keywords" content="HTML,CSS,JavaScript,React">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- ajustando la pagina web -->
+  <!-- Titulo -->
+  <title>Municipalidad provincial de Huari</title>
+  <!-- Favicon o icono -->
+  <link rel="icon" type="image/x-icon" href="imagenes/LOGOHUARI2.png">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
+  <!-- CSS -->
+  <link href="estilosnoticias.css" rel="stylesheet">
+
+  <style>
+img.izquierda {
+  float: left;
+}
+
+     
+  </style>
+</head>
+
+
+<body>
+  <!-- Informacion -->
+  <style>
+    a {
+      font-weight: bold; 
+      text-decoration: bold;
+      color: black;
+    }
+  </style>
+  <footer class="w-100 d-flex align-items-center justify-content-center flex-wrap">
+    <div class="texto">
+      <a class="fs-5 px-3 pt-3" href="mesa.html" target="_blank" &copy>MESA DE PARTES VIRTUAL</a>
+    </div>
+
+    <div id="iconos">
+      <a href="https://www.facebook.com/MuniHuari"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.youtube.com/@municipalidadprovincialdeh9527"><i class="bi bi-youtube"></i></a>
+      <a href="https://www.instagram.com/provincialhuari/"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=11196#.ZFiMmXbMLIV"><i
+          class="bi bi-archive-fill"></i></i></a>
+    </div>
+  </footer>
+
+  <!-- Barra de navegacion -->
+  <nav class="navbar navbar-expand-md navbar-dark-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-Toggler"
+        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-Toggler">
+        <a class="navbar-brand" href="#">
+          <img src="imagenes/LOGOHUARI2.png" width="220" alt="Logotipo de la pagina de la Municipalidad">
+        </a>
+
+
+        <ul class="navbar-nav d-flex justify-content-center aling-items-center">
+          <!-- flexible,alineacion en el eje central -->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+
+          <!-- Desplegable 01 -->
+          <li class="nav-item dropdown">
+
+            <a href="#" class="nav-link dropdown-toggler" data-bs-toggle="dropdown">Municipio</a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+          </li>
+          <a href="#" class="dropdown-item">Vision y Mision</a>
+          </li>
+
+          <li>
+            <href="#" class="dropdown-item">Autoridades Municipales</a>
+          </li>
+
+          <li>
+            <href="#" class="dropdown-item">Funcionarios Municipales</a>
+          </li>
+        </ul>
+        </li>
+
+        <!-- Desplegable 02 -->
+        <li class="nav-item dropdown">
+
+          <a href="#" class="nav-link dropdown-toggler" data-bs-toggle="dropdown">Turismo</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+        </li>
+        <a href="#" class="dropdown-item">Historia prehispánica</a>
+        </li>
+
+        <li>
+          <href="#" class="dropdown-item">Atractivos turístico</a>
+        </li>
+
+
+        </ul>
+        </li>
+
+        <!-- Estatico 03 -->
+        <a class="nav-link " href="#">Transparencia</a>
+        </li>
+
+        <!-- Desplegable 04 -->
+        <li class="nav-item dropdown">
+
+          <a href="#" class="nav-link dropdown-toggler" data-bs-toggle="dropdown">Noticias</a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+        </li>
+        <a href="#" class="dropdown-item">Sesiones de consejo</a>
+        </li>
+
+        <li>
+          <href="#" class="dropdown-item">Notas de prensa</a>
+        </li>
+
+
+        </ul>
+        </li>
+
+
+
+
+
+
+
+        <li class="nav-item">
+          <a class="nav-link " href="#">Comunicados</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#">Comvocatoria CM</a>
+        </li>
+        <li class="nav-item dropdown">
+
+          <a href="#" class="" nav-link dropdown-toggler data-bs-toggle="dropdown"></a>
+
+
+        </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <br><br>
+  <section>
+    <!--postada-->
+			<div class="logo-wrapper d-flex align-items-center">
+				<h1>
+					<a href="index.html">
+						NOTICIAS
+					</a>
+				</h1>
+			</div>
+		</div>
+    <div class="container main-news section">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-xs-12 col-lg-6">
+          <img class="thumb mb-3" src="https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/347380226_786455603130183_8100899105764387929_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeEAL6roskCL_hh11RPhyFN8EdffGoeZU9wR198ah5lT3ANiaTECDrtwpcWlO7kSLZbQ08pBma9lyzVfagu7nBne&_nc_ohc=TDcivJbMwowAX8REfT9&_nc_ht=scontent-lim1-1.xx&oh=00_AfB3qK8HLsZAR3OxX6RNjVVaEnQYUF4KCJqQ-9HRtHnXow&oe=64A54487">
+          <h3>
+            <a class="font-large" href="https://www.facebook.com/photo/?fbid=786454579796952&set=pcb.786455293130214">
+              ALCALDE HUARINO FUE DECLARADO HUÉSPED ILUSTRE EN LA PROVINCIA DE POMABAMBA
+            </a>
+          </h3>
+        </div>
+        <div class="col-sm-12 col-md-6 col-xs-12 col-lg-6">
+          <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
+              <div class="image image-sm mb-1">
+                <img class="thumb" src="https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/354606966_786063959836014_4980885290035948026_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeFw-zI0k_oO8yanm5_MWbS-gElF2SjLCi2ASUXZKMsKLen4aR1SXr94I06rHRWmoYLDCf6HMGrxDE53NNm0nGch&_nc_ohc=jYQx_kkyVRkAX-GiRmx&_nc_ht=scontent-lim1-1.xx&oh=00_AfAxCkJ4pQMJakBZ_sUEEX4PmiG8SA_yIuRBDahUMeWHLA&oe=64A4B743">
+              </div>
+              <h3 class="mb-4">
+                <a href="https://www.facebook.com/photo/?fbid=786063963169347&set=pcb.786064056502671">
+                  REVALORAN TRADICIONAL COSTUMBRE DE CONSUMO DE CHICHA DE MANÍ HUARINO
+                </a>
+              </h3>
+
+              <div class="image image-sm mb-1">
+                <img class="thumb" src="https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/354599338_786054816503595_2392087183789877458_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeEfjwPhsBSAMRPhN9s3lQtZ5DYMKMbPDZTkNgwoxs8NlC2bv1TGXUMdtyyw6-__pft8xb22D0y16RTEPZldb_e3&_nc_ohc=s2oEy1HxBBIAX99g7tS&_nc_ht=scontent-lim1-1.xx&oh=00_AfC3VsLJwTIxUjcAV-l788hyeKKkN8WRyTT_l9Os43I07A&oe=64A65526">
+              </div>
+              <h3 class="mb-4">
+                <a href="https://www.facebook.com/photo/?fbid=786054819836928&set=pcb.786057503169993">
+                  DAN ÚLTIMO ADIÓS A HUARINA NARCISA TRUJILLO SOTELO
+                </a>
+              </h3>
+
+            </div>
+
+            <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
+              <div class="image image-sm mb-1">
+                <img class="thumb" src="https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/347248929_783968480045562_6520168862193764122_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeHml455gLr7W7YAQtfGN3SR26ZF9UVOApbbpkX1RU4Clvu8zNrx-mxIhubaCwiRnKOr2hqZlQ7l3J2OA-sBRmze&_nc_ohc=QBiQ1GNCE1gAX_MU7BE&_nc_ht=scontent-lim1-1.xx&oh=00_AfCH5cEC90mgc6oCCcgvrru4_zTKGVfyBMB2xWF03YoARw&oe=64A5AF1E">
+              </div>
+              <h3 class="mb-4">
+                <a href="https://www.facebook.com/photo/?fbid=783966596712417&set=pcb.783967743378969">
+                  CON ÉXITO SE REALIZÓ COPROSEC DESCENTRALIZADO EN EL DISTRITO DE SAN MARCOS
+                </a>
+              </h3>
+
+              <div class="image image-sm mb-3">
+                <img class="thumb image-sm" src="https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/355861101_790561552719588_1125359858908538604_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeGK4mYpZkmy2f0ojWN_dkCPT5LTj4Hqo9ZPktOPgeqj1qSFJYCWmcVkVmFO0fGqHD05issmLtC73Fj7m74SarRq&_nc_ohc=TBT7jyt-G6oAX_7ywt2&_nc_ht=scontent-lim1-1.xx&oh=00_AfDcl48vcRlqE7e-0WSdUxZ0LvojPvoUklpitkwPbAUTvA&oe=64A699C5">
+              </div>
+              <h3>
+                <a href="https://www.facebook.com/photo/?fbid=790561559386254&set=a.406555687786845">
+                  🎉¡𝐅𝐄𝐋𝐈𝐙 36° 𝐀𝐍𝐈𝐕𝐄𝐑𝐒𝐀𝐑𝐈𝐎 𝐔𝐆𝐄𝐋 - 𝐇𝐔𝐀𝐑𝐈!🎉
+                </a>
+              </h3>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+			<div class="container section mt-4">
+				<div class="section-title">
+					<span>En vivo</span>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Ffb.watch%2FlwndBjIOy9%2F&width=300&show_text=false&height=169&appId" width="300" height="169" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+            <a href="https://fb.watch/lwndBjIOy9/">
+							🍀¡¡¡FELIZ DÍA DEL CAMPESINO!!!🥑
+						</a>
+          </div>
+         <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+          <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Ffb.watch%2Flwo1iTgkTH%2F&width=300&show_text=false&height=169&appId" width="300" height="169" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+          <a href="https://fb.watch/lwo1iTgkTH/">
+            💃¡¡DANZAS FOLKLÓRICAS DE POMABAMBA Y EL HUARIDANZA!!💃
+          </a>
+        </div>
+          <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Ffb.watch%2FlwoksV-DAh%2F&width=300&show_text=false&height=169&appId" width="300" height="169" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+            <a href="https://fb.watch/lwo1iTgkTH/">
+              ¡¡ALCALDE PROVINCIAL DE HUARI ARTICIPA EN XX SEMANA TURÍSTICA POMABA!!
+            </a>
+          </div>
+            <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+              <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Ffb.watch%2FlwowW2TZJ_%2F&width=300&show_text=false&height=169&appId" width="300" height="169" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+              <a href="https://fb.watch/lwowW2TZJ_/">
+                ¡¡HUARINOS INSCRIBIRSE AL PROCOMPITE REGIONAL!!
+              </a>
+            </div>
+				</div>
+			</div>
+
+
+			<div class="container section">
+				<div class="row">
+					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+						<div class="mb-4 mt-4">
+							<div class="section-title">
+								<span>Notas de Prensa</span>
+							</div>
+							<div class="row mb-3 bb-1 pt-0">
+								<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+									<img class="thumb" src="https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/347249001_790734522702291_227202760442357711_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeHxO-3Rf3lHjBkxa7TrjNncxKReLqhqC6PEpF4uqGoLo_QPJwKEiqKOBtfme_usteOS8SwoqJQ-Q3wa26g2150n&_nc_ohc=ewITPwEmkHIAX-rSDu8&_nc_ht=scontent-lim1-1.xx&oh=00_AfC_HyYN3ndx-VsRsOVamU-7A7ubiwvBalA1LXnkTJPsZg&oe=64A66B09">
+								</div>
+								<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+									<h5>
+										<a href="https://www.facebook.com/photo?fbid=790734176035659&set=pcb.790734359368974">
+											PROMOCIONARÁN LOS DESTINOS QUE CONFORMAN EL CORREDOR TURÍSTICO DE LA ZONA CONCHUKOS
+										</a>
+									</h5>
+									<small>28 junio, 2023</small>
+									<p class="summary pt-3">La Subgerencia de Turismo de la Municipalidad Provincial de Huari (MPHi), participó de la mesa de diálogo y coordinación para promocionar la zona de los Conchukos como corredor turístico.</p>
+								</div>
+							</div>
+							<div class="row mb-3 bb-1 pt-0">
+								<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+									<img class="thumb" src="https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/347386394_790715452704198_1556018173591665846_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeGL0uQpbxOK5Yy4fU9rV0mNCerMuxfWLkoJ6sy7F9YuSoY2IOJWgj0c794mpZ3VVzZYaZLWKWcUEsI4SWm-HtfI&_nc_ohc=FShA5yPx2E0AX_XdofY&_nc_ht=scontent-lim1-1.xx&oh=00_AfB82AdTbgvtj1T9AIZqLumD7TDaUYF7nFDK7r5d9X2akg&oe=64A5AC1D">
+								</div>
+								<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+									<h5>
+										<a href="https://www.facebook.com/photo?fbid=790715349370875&set=pcb.790715436037533">
+											ALCALDE PROVINCIAL DE HUARI SOSTIENE REUNIÓN CON PROVÍAS NACIONAL
+										</a>
+									</h5>
+									<small>28 junio, 2023</small>
+									<p class="summary pt-3">En la ciudad de Lima, el alcalde de la Municipalidad Provincial de Huari (MPHi), Ing. Lorgio Ríos Ocaña, sostuvo una reunión de trabajo con representantes de Provias Nacional.</p>
+								</div>
+							</div>
+							<div class="row mb-3 bb-1 pt-0">
+								<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+									<img class="thumb" src="https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/347553961_788169909625419_1622662723354993769_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeFW_GPPwMAr82TptwVuW5dX0V6axlO09yfRXprGU7T3J2RRY25lP0uigg9XtQ0hw-R4bq180BsgY6lSKrDHqK6V&_nc_ohc=0xa9scvktF8AX_-MX9D&_nc_ht=scontent-lim1-1.xx&oh=00_AfDYD1OndS2-QvvSCLBZ5iucDzaIvui5McwO9ge9mmeMFw&oe=64A59AE6">
+								</div>
+								<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+									<h5>
+										<a href="https://www.facebook.com/photo/?fbid=788169466292130&set=pcb.788169519625458">
+											🥑¡¡FELIZ DÍA DEL CAMPESINO!!🌿
+										</a>
+									</h5>
+									<small>24 junio, 2023</small>
+									<p class="summary pt-3">El alcalde de la Municipalidad Provincial de Huari, Ing. Lorgio Ríos Ocaña, regidores, funcionarios, extienden un afectuoso saludo a todos los hermanos del campo en el marco de la conmemoración del "Día del Campesino", que se celebra cada 24 de junio</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						<div class="trending mt-4">
+							<div class="section-title">
+								<span>Tendencias</span>
+							</div>
+							<div class="row">
+								<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+									<img class="thumb" src="https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/322075287_1209332846601221_3165354424192468166_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeGHlN0Yv8MyZtqZSaX5wpCIR9qanSxxk95H2pqdLHGT3i5LfV6JbigTQIRu03DxokHbFs14-4UtwrGytpz_eRvY&_nc_ohc=bK0ZLQTHTIgAX9VmtEz&_nc_ht=scontent-lim1-1.xx&oh=00_AfDf20iIEX0AgaiRjUgwOuPdqkPolupx6r6gN4f5NxRitw&oe=64A5552A">
+								</div>
+								<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+									<a href="https://www.facebook.com/photo/?fbid=693175725791505&set=pcb.693175845791493">
+										ACUERDAN SOLICITAR REUNIÓN CON MINISTERIO DE TRANSPORTES 
+									</a>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+									<img class="thumb" src="https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/347552489_789984032777340_2291676458512528120_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeHfivlULo5WlJ_gDfuw5JgXY9W_gyW0rXlj1b-DJbSteffUJbIxCK08tz5YjcCUaziNgb0CSDLTut1IVQF09RrM&_nc_ohc=h56zAJZZ5UIAX_nJ-z8&_nc_ht=scontent-lim1-1.xx&oh=00_AfBZold5vECjk-YXtksUOjEnyNy6bVqGx9MvfNLC7-Noig&oe=64A50C2D">
+								</div>
+								<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+									<a href="https://www.facebook.com/photo?fbid=789983602777383&set=pcb.789983879444022">
+										INICIAN ACTIVIDAD HUARI, "TE QUIERO LIMPIO"
+									</a>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<script type="text/javascript">
+			window.onscroll = function(){
+				setSticky();
+			}
+
+			navbar = document.getElementsByClassName('menu')[0];
+			var sticky = navbar.offsetTop;
+			function setSticky(){
+				if(window.pageYOffset >= sticky){
+					navbar.classList.add('sticky');
+				}else{
+					navbar.classList.remove('sticky');
+				}
+			}
+		</script>
+
+</section>
+
+
+<footer class="text-center text-lg-start bg-light text-muted">
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+  </section>
+  <section class="">
+    <div class="pie ">
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-4">
+              <h6><b>REDES SOCIALES</b></h6>
+              <p>Informate en nuestras plataformas<br>
+                  Digitales de interes publico <br>
+                  Actividades Sociales</p>
+        </div>
+        <div class="col-sm-4">
+          <h6 class="text-uppercase fw-bold mb-4">
+            UBICACIÓN</h6>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7873.659570409888!2d-77.17618175926798!3d-9.348326126521167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91a8e049c4fbbe09%3A0x9edf5852f6fa2611!2sMunicipalidad%20Provincial%20de%20Huari!5e0!3m2!1ses-419!2spe!4v1683947461235!5m2!1ses-419!2spe" 
+              width="200" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          
+        </div>
+        <div class="col-sm-4">
+          <h6 class="text-uppercase fw-bold mb-4">
+           CONTACTOS
+          </h6>
+          <div id="iconos">
+            <p><a class="bi bi-geo-alt-fill"></a> Santo Domingo de Huari, Perú </p>
+            <p><a class="bi bi-telephone-fill"></a> (043) 380365</p>
+            <p><a class="bi bi-envelope-fill"></a> provincialdehuari@gmail.com</p>
+    </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2023
+    <a class="text-reset fw-bold">MUNICIPALIDAD PROVINCIAL DE HUARI</a>
+  </div>
+</footer>
+  </footer>
+
+</body>
+</html>
