@@ -5,31 +5,20 @@
   align-items: center;
   display: flex;
   position: relative;
-  top: 200px;
+  top: 200px;}
   
-}
-
-.imagen-con-nombre {
-  text-align: center;
-  
-}
-
-.imagen-con-nombre img {
-  display: block;
-  margin: 0 auto;
-  width: 150px; /* Ajusta el ancho del contenedor según tus necesidades */
-  height: 150px; /* Ajusta la altura del contenedor según tus necesidades */
-}
-
-.nombre-colegio {
-  margin-top: 50px;
-  text-decoration: none;
-}
 a {
   font-size: 30px;
   font-family: "inter";
   text-decoration: none;
   color: inherit;
+}
+
+.Insignias .ManuelG,
+.Insignias .VirgenF,
+.Insignias .SilviaR {
+  text-align: center;
+  margin: 0 10px;
 }
 
 /*barra desplegable*/
